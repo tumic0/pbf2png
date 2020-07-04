@@ -21,7 +21,7 @@ the file name (or somewhere else) is required. The default mask(regular expressi
 is `([0-9]+).*` which should fit all common tile name schemes like `$z-$x-$y.pbf`,
 `$z_$y_$x.mvt`, etc.
 
-## Styles
+### Styles
 See the QtPBFImagePlugin [documentation](https://github.com/tumic0/QtPBFImagePlugin#styles)
 for how to set the style used for rendering the tiles. For the default OpenMapTiles
 data schema and the default OSM-Liberty style nothing needs to be done.
