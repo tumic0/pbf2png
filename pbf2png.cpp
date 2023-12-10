@@ -67,10 +67,12 @@ int App::run()
 	parser.addOption(mask);
 	parser.addOption(outdir);
 	parser.addPositionalArgument("DIR", "PBF Tiles directory");
-	if (!parser.parse(arguments()))
-		return -1;
-
 	QTextStream err(stderr);
+
+	if (!parser.parse(arguments())) {
+		err << parser.errorText() << "\n";
+		return -1;
+	}
 
 	const QStringList args = parser.positionalArguments();
 	if (!args.size()) {
